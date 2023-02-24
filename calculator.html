@@ -1,0 +1,178 @@
+
+
+<html>
+    <head>
+        <title> calculator </title>
+    
+        <script>
+        function insert(num)
+        {
+            document.cal.output.value=document.cal.output.value+num
+        }
+    
+        function clean()
+        {
+            document.cal.output.value="";
+        }
+        
+        function equal()
+        {
+            var exp=document.cal.output.value;
+            if(exp)
+            {
+                document.cal.output.value=eval(exp)
+            }
+        }
+    
+    
+        </script>
+    
+        <style>
+    
+    *
+    {
+        box-sizing: border-box;
+    }
+    
+        .button
+        {
+            color: black;
+            border-radius: 10px;
+            width: 100px;
+            height: 100px;
+            column-rule-style:solid;
+            font-size: 30;
+            font-weight: 200;
+            cursor: pointer;
+        }
+    
+        .output
+        {
+            color: black;
+            border-radius: 10px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            border-style: solid;
+            background-color: beige;
+            font-size: 30;
+            width: 430px;
+            height: 70px;
+        }
+    
+        .border
+        {
+            border-radius: 10px;
+        }
+        .clear
+        {
+            width: 100px;
+            height: 100px;
+            font-size: 60;
+            background-color:indianred;
+            border-color: red;
+        }
+        .equal
+        {
+            height: 100px;
+            width: 100px;
+            font-size: 40px;
+            color: whitesmoke;
+            background-color: black;
+        }
+    
+        .button1
+        {
+            width: 100px;
+            height: 100px;
+            font-size: 35px;
+            color: black;
+            border-radius: 20px;
+            background-color: paleturquoise;
+    
+        }
+        .input {
+            text-align: center;
+          }
+          ::-webkit-input-placeholder {
+            text-align: center;
+          }
+          :-moz-placeholder {
+            text-align: center;
+          }
+    
+          .date
+          {
+              width: 430px;
+          }
+    
+          .background
+          {
+              position:absolute;
+              top: 10%;
+              left: ;
+          }
+          .bd 
+          {
+              background:linear-gradient(red,blue,pink,navy,green)    }
+    
+          .chamal
+          {
+               position: fixed;
+             top: 20%;
+             left: 35%;
+             box-shadow: 0px 0px 43px 17px rgb(8, 8, 8);
+          }
+        </style>
+    
+    
+    </head>
+    
+    <body class="bd">
+        <form name="cal">
+            <div class="chamal">
+        <table  class="border">
+        <div class="background"></div>
+           
+    
+    
+        <input type="text" class="output" name="output" placeholder="000.00">
+        
+    
+    <tr>
+        <td><input type="button" class="button1" value="1" onclick="insert(1)"></td>
+        <td><input type="button" class="button1" value="2" onclick="insert(2)"></td>
+        <td><input type="button" class="button1" value="3" onclick="insert(3)"></td>
+        <td><input type="button" class="clear" value="c" onclick="clean()"></td>
+    </tr>
+    
+    <tr>
+        <td><input type="button" class="button1" value="4" onclick="insert(4)"></td>
+        <td><input type="button" class="button1" value="5" onclick="insert(5)"></td>
+        <td><input type="button" class="button1" value="6" onclick="insert(6)"></td>
+        <td><input type="button" class="button" value="/" onclick="insert('/')"></td>
+    </tr>
+    
+    <tr>
+        <td><input type="button" class="button1" value="7" onclick="insert(7)"></td>
+        <td><input type="button" class="button1" value="8" onclick="insert(8)"></td>
+        <td><input type="button" class="button1" value="9" onclick="insert(9)"></td>
+        <td><input type="button" class="button" value="*" onclick="insert('*')"></td>
+    </tr>
+    
+    <tr>
+        <td><input type="button" class="button" value="+" onclick="insert('+')" ></td>
+        <td><input type="button" class="button1" value="0" onclick="insert(0)"></td>
+        <td><input type="button" class="button" value="-" onclick="insert('-')"></td>
+        <td><input type="button" class="equal" value="=" onclick="equal()"></td>
+    </tr>
+    
+    
+    
+        </div>
+       
+       
+        </table>
+    </form>
+    <input type="datetime-local" class="date"> 
+    </body>
+    </html>
